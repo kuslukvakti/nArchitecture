@@ -46,6 +46,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "src\demoProjects\rentACar\Persistence\Persistence.csproj", "{279CF8EB-FC0C-48F6-8C7D-1D8E53D221DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "src\demoProjects\rentACar\WebAPI\WebAPI.csproj", "{05452D0C-E10A-4114-894E-BEFE1E073AB5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{279CF8EB-FC0C-48F6-8C7D-1D8E53D221DB} = {279CF8EB-FC0C-48F6-8C7D-1D8E53D221DB}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
