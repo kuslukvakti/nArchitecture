@@ -10,7 +10,7 @@
         {
         }
 
-        public Brand(int id, string name): this()
+        public Brand(int id, string name): this() //this() parametresiz constructor calistirir
         {
             Id = id;
             Name = name;
