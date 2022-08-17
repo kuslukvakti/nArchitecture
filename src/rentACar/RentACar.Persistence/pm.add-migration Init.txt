@@ -1,0 +1,6 @@
+﻿PM> add-migration Init
+Build started...
+Build succeeded.
+Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.8 initialized 'BaseDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+To undo this action, use Remove-Migration.

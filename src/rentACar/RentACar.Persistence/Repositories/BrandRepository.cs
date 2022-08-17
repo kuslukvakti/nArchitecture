@@ -1,9 +1,9 @@
-﻿namespace Persistence.Repositories
+﻿namespace RentACar.Persistence.Repositories
 {
-    using Application.Services.Repositories;
     using Core.Persistence.Repositories;
     using Domain.Entities;
-    using Persistence.Contexts;
+    using RentACar.Application.Services.Repositories;
+    using RentACar.Persistence.Contexts;
 
     public class BrandRepository : EfRepositoryBase<Brand, BaseDbContext>, IBrandRepository
     {

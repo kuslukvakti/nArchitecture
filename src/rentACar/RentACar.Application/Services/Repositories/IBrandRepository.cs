@@ -1,7 +1,7 @@
-﻿namespace Application.Services.Repositories
+﻿namespace RentACar.Application.Services.Repositories
 {
     using Core.Persistence.Repositories;
-    using Domain.Entities;
+    using RentACar.Domain.Entities;
 
     public interface IBrandRepository : IAsyncRepository<Brand>, IRepository<Brand>
     {

@@ -1,8 +1,8 @@
-﻿namespace Persistence.Contexts
+﻿namespace RentACar.Persistence.Contexts
 {
-    using Domain.Entities;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
+    using RentACar.Domain.Entities;
 
     public class BaseDbContext : DbContext
     {
@@ -31,12 +31,8 @@
                 a.Property(p => p.Name).HasColumnName("Name");
             });
 
-
-
             Brand[] brandEntitySeeds = { new(1, "BMW"), new(2, "Mercedes") };
             modelBuilder.Entity<Brand>().HasData(brandEntitySeeds);
-
-
         }
     }
 }
