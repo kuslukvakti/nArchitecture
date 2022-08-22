@@ -1,20 +1,17 @@
-﻿using Application.Features.someFeature.Dtos;
-using Application.Features.someFeature.Rules;
-using Application.Services.Repositories;
-using AutoMapper;
-using Domain.Entities;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.Features.someFeature.Commands.CreateSomeFeature
+﻿namespace Application.Features.someFeature.Commands.CreateSomeFeature
 {
+    using Application.Features.someFeature.Dtos;
+    using Application.Features.someFeature.Rules;
+    using Application.Services.Repositories;
+    using AutoMapper;
+    using Domain.Entities;
+    using MediatR;
+    using System.Threading.Tasks;
+
     public class CreateSomeFeatureEntityCommand : IRequest<CreatedSomeFeatureEntityDto>
     {
         public string Name { get; set; }
+
         public class CreateSomeFeatureEntityCommandHandler : IRequestHandler<CreateSomeFeatureEntityCommand, CreatedSomeFeatureEntityDto>
         {
             private readonly ISomeFeatureEntityRepository _someFeatureEntityRepository;
