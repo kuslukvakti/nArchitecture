@@ -9,9 +9,9 @@
     public class BrandController : BaseController
     {
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] CreateBrandCommand createSomeFeatureEntityCommand)
+        public async Task<IActionResult> Add([FromBody] CreateBrandCommand createBrandCommand)
         {
-            CreatedBrandDto result = await Mediator.Send(createSomeFeatureEntityCommand);
+            CreatedBrandDto result = await Mediator.Send(createBrandCommand);
             return Created("", result);
         }
 
