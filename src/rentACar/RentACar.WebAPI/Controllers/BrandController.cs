@@ -14,7 +14,5 @@
             CreatedBrandDto result = await Mediator.Send(createBrandCommand);
             return Created("", result);
         }
-
-
     }
 }
