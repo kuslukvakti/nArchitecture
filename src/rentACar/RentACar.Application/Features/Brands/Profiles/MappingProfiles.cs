@@ -1,4 +1,4 @@
-﻿namespace Application.Features.someFeature.Profiles
+﻿namespace RentACar.Application.Features.Brands.Profiles
 {
     using AutoMapper;
     using RentACar.Application.Features.Brands.Commands.CreateBrand;
