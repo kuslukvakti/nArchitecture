@@ -1,3 +1,4 @@
+using Core.CrossCuttingConcerns.Exceptions;
 using RentACar.Application;
 using RentACar.Persistence;
 
@@ -22,9 +23,13 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.ConfigureCustomExceptionMiddleware();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+if (app.Environment.IsProduction())
+    app.ConfigureCustomExceptionMiddleware();
 
 app.UseAuthorization();
 

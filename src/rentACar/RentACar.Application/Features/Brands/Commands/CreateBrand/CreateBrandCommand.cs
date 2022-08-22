@@ -3,6 +3,7 @@
     using AutoMapper;
     using MediatR;
     using RentACar.Application.Features.Brands.Dtos;
+    using RentACar.Application.Features.Brands.Rules;
     using RentACar.Application.Services.Repositories;
     using RentACar.Domain.Entities;
     using System.Threading.Tasks;
@@ -15,18 +16,23 @@
         {
             private readonly IBrandRepository _brandRepository;    
             private readonly IMapper _mapper;
+            private readonly BrandBusinessRules _brandBusinessRules;
 
-            public CreateBrandCommandHandler(IBrandRepository brandRepository, IMapper mapper)
+            public CreateBrandCommandHandler(IBrandRepository brandRepository, IMapper mapper, BrandBusinessRules brandBusinessRules)
             {
                 _brandRepository = brandRepository;
                 _mapper = mapper;
+                _brandBusinessRules = brandBusinessRules;
             }
 
             public async Task<CreatedBrandDto> Handle(CreateBrandCommand request, CancellationToken cancellationToken)
             {
+                await _brandBusinessRules.SomeFeatureEntityNameCanNotBeDuplicatedWhenInserted(request.Name);
+
                 Brand mappedBrand = _mapper.Map<Brand>(request);
                 Brand createdBrand = await _brandRepository.AddAsync(mappedBrand);
                 CreatedBrandDto createdBrandDto = _mapper.Map<CreatedBrandDto>(createdBrand);
+
                 return createdBrandDto;
             }
         }
