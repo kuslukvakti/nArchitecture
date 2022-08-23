@@ -22,6 +22,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     //app.ConfigureCustomExceptionMiddleware();
+    
     app.UseSwagger();
     app.UseSwaggerUI();
 }
