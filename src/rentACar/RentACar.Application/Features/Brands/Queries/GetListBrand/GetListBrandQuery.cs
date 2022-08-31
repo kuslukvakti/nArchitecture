@@ -19,11 +19,12 @@
             private readonly IMapper _mapper;
             private readonly IBrandRepository _brandRepository;
 
-            public GetListBrandQueryHandler(PageRequest pageRequest, IBrandRepository brandRepository, IMapper mapper)
+            public GetListBrandQueryHandler(IBrandRepository brandRepository, IMapper mapper)
             {
                 _brandRepository = brandRepository;
                 _mapper = mapper;
             }
+
             public async Task<BrandListModel> Handle(GetListBrandQuery request, CancellationToken cancellationToken)
             {
                 IPaginate<Brand> brands = await _brandRepository.GetListAsync(index: request.PageRequest.Page, size: request.PageRequest.PageSize);

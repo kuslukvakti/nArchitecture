@@ -2,7 +2,10 @@
 {
     using Application.Features.Brands.Commands.CreateBrand;
     using Application.Features.Brands.Dtos;
+    using Core.Application.Requests;
     using Microsoft.AspNetCore.Mvc;
+    using RentACar.Application.Features.Brands.Models;
+    using RentACar.Application.Features.Brands.Queries.GetListBrand;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -15,11 +18,14 @@
             return Created("", result);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> GetList([FromBody] GetList createBrandCommand)
+        [HttpGet]
+        public async Task<IActionResult> GetList([FromQuery] PageRequest pageRequest)
         {
-            CreatedBrandDto result = await Mediator.Send(createBrandCommand);
-            return Created("", result);
+            GetListBrandQuery getListBrandQuery = new() { PageRequest = pageRequest };
+            
+            BrandListModel result = await Mediator.Send(getListBrandQuery);
+
+            return Ok(result);
         }
 
     }
