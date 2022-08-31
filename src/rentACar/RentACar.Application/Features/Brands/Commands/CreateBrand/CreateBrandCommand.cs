@@ -27,7 +27,7 @@
 
             public async Task<CreatedBrandDto> Handle(CreateBrandCommand request, CancellationToken cancellationToken)
             {
-                await _brandBusinessRules.SomeFeatureEntityNameCanNotBeDuplicatedWhenInserted(request.Name);
+                await _brandBusinessRules.BrandNameCanNotBeDuplicatedWhenInserted(request.Name);
 
                 Brand mappedBrand = _mapper.Map<Brand>(request);
                 Brand createdBrand = await _brandRepository.AddAsync(mappedBrand);
