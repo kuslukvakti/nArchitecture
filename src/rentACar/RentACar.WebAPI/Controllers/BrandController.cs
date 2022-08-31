@@ -14,5 +14,13 @@
             CreatedBrandDto result = await Mediator.Send(createBrandCommand);
             return Created("", result);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> GetList([FromBody] GetList createBrandCommand)
+        {
+            CreatedBrandDto result = await Mediator.Send(createBrandCommand);
+            return Created("", result);
+        }
+
     }
 }

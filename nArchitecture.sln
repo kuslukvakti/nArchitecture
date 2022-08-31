@@ -35,17 +35,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "src\demoProj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "src\demoProjects\templateProject\WebAPI\WebAPI.csproj", "{54568B1F-31E7-4BA3-A2ED-826E85050603}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Application", "src\rentACar\RentACar.Application\RentACar.Application.csproj", "{01E7DE16-905A-4D0A-A3D3-186BCD7AEE9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Application", "src\rentACar\RentACar.Application\RentACar.Application.csproj", "{01E7DE16-905A-4D0A-A3D3-186BCD7AEE9D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CD9A8AA1-5CAB-4218-91C5-2550BB86354A} = {CD9A8AA1-5CAB-4218-91C5-2550BB86354A}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rentACar", "rentACar", "{2A14C09F-9E8D-4837-9A39-7BAF364BB452}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Domain", "src\rentACar\RentACar.Domain\RentACar.Domain.csproj", "{500B78A3-AE97-472F-BE98-F8031E0055FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Domain", "src\rentACar\RentACar.Domain\RentACar.Domain.csproj", "{500B78A3-AE97-472F-BE98-F8031E0055FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Infrastructure", "src\rentACar\RentACar.Infrastructure\RentACar.Infrastructure.csproj", "{FE80121C-1B6B-4408-88ED-0F703BEDE6BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Infrastructure", "src\rentACar\RentACar.Infrastructure\RentACar.Infrastructure.csproj", "{FE80121C-1B6B-4408-88ED-0F703BEDE6BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Persistence", "src\rentACar\RentACar.Persistence\RentACar.Persistence.csproj", "{81443E8B-03B3-49F6-BF07-43CB45C79E1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Persistence", "src\rentACar\RentACar.Persistence\RentACar.Persistence.csproj", "{81443E8B-03B3-49F6-BF07-43CB45C79E1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "src\rentACar\RentACar.WebAPI\RentACar.WebAPI.csproj", "{9ABBBEB6-B1C5-40B2-8E4C-48E490885E48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.WebAPI", "src\rentACar\RentACar.WebAPI\RentACar.WebAPI.csproj", "{9ABBBEB6-B1C5-40B2-8E4C-48E490885E48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
