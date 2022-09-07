@@ -6,6 +6,8 @@
     {
         public string Name { get; set; }
 
+        public ICollection<Model> Models { get; set; }
+
         public Brand()
         {
         }
