@@ -5,5 +5,6 @@
 
     public interface IBrandRepository : IAsyncRepository<Brand>, IRepository<Brand>
     {
+
     }
 }

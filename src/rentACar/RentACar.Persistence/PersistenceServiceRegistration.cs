@@ -1,9 +1,9 @@
 ﻿namespace RentACar.Persistence
 {
+    using RentACar.Application.Services.Repositories;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using RentACar.Application.Services.Repositories;
     using RentACar.Persistence.Contexts;
     using RentACar.Persistence.Repositories;
 
@@ -16,6 +16,7 @@
                                                      options.UseSqlServer(
                                                          configuration.GetConnectionString("RentACarCampConnectionString")));
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IModelRepository, ModelRepository>();
 
             return services;
         }

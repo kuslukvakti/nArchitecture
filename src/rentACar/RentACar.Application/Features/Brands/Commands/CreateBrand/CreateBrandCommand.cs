@@ -1,20 +1,20 @@
 ﻿namespace RentACar.Application.Features.Brands.Commands.CreateBrand
 {
     using AutoMapper;
+    using RentACar.Domain.Entities;
     using MediatR;
     using RentACar.Application.Features.Brands.Dtos;
     using RentACar.Application.Features.Brands.Rules;
     using RentACar.Application.Services.Repositories;
-    using RentACar.Domain.Entities;
     using System.Threading.Tasks;
 
-    public class CreateBrandCommand : IRequest<CreatedBrandDto>
+    public partial class CreateBrandCommand : IRequest<CreatedBrandDto>
     {
         public string Name { get; set; }
 
         public class CreateBrandCommandHandler : IRequestHandler<CreateBrandCommand, CreatedBrandDto>
         {
-            private readonly IBrandRepository _brandRepository;    
+            private readonly IBrandRepository _brandRepository;
             private readonly IMapper _mapper;
             private readonly BrandBusinessRules _brandBusinessRules;
 
@@ -34,6 +34,7 @@
                 CreatedBrandDto createdBrandDto = _mapper.Map<CreatedBrandDto>(createdBrand);
 
                 return createdBrandDto;
+
             }
         }
     }

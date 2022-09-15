@@ -7,7 +7,7 @@ using RentACar.Persistence.Contexts;
 
 #nullable disable
 
-namespace Persistence.Migrations
+namespace RentACar.Persistence.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
     partial class BaseDbContextModelSnapshot : ModelSnapshot

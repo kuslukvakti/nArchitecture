@@ -3,21 +3,18 @@
     using AutoMapper;
     using Core.Application.Requests;
     using Core.Persistence.Paging;
+    using RentACar.Domain.Entities;
     using MediatR;
     using RentACar.Application.Features.Brands.Models;
     using RentACar.Application.Services.Repositories;
-    using RentACar.Domain.Entities;
-    using System.Threading;
-    using System.Threading.Tasks;
 
     public class GetListBrandQuery : IRequest<BrandListModel>
     {
         public PageRequest PageRequest { get; set; }
-
         public class GetListBrandQueryHandler : IRequestHandler<GetListBrandQuery, BrandListModel>
         {
-            private readonly IMapper _mapper;
             private readonly IBrandRepository _brandRepository;
+            private readonly IMapper _mapper;
 
             public GetListBrandQueryHandler(IBrandRepository brandRepository, IMapper mapper)
             {
