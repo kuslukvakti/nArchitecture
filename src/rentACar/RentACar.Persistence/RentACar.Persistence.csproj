@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\demoProjects\templateProject\Persistence\Persistence.csproj" />
     <ProjectReference Include="..\RentACar.Application\RentACar.Application.csproj" />
     <ProjectReference Include="..\RentACar.Domain\RentACar.Domain.csproj" />
   </ItemGroup>
